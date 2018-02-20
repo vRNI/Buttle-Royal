@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4057076-8163-44DB-9C04-6843C2F58174}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ButtleRoyal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>ButtleRoyal</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)-$(PlatformShortName)-$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)-$(PlatformShortName)-$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)-$(PlatformShortName)-$(Configuration)</TargetName>
+    <IntDir>$(SolutionDir)..\tmp\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>FINALFRONTIER_DLL_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SFMLROOT)/include;$(TGUIROOT)/include</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFMLROOT)/lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-network-d.lib;sfml-audio-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;tgui-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>FINALFRONTIER_DLL_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SFMLROOT)/include;$(TGUIROOT)/include</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFMLROOT)/lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-network-d.lib;sfml-audio-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>FINALFRONTIER_DLL_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SFMLROOT)/include;$(TGUIROOT)/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SFMLROOT)/lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-system.lib;sfml-window.lib;sfml-network.lib;sfml-audio.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;tgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="../src/stdafx.h" />
+    <ClInclude Include="../src/targetver.h" />
+    <ClInclude Include="../src/GameState.h" />
+    <ClInclude Include="../src/MainState.h" />
+    <ClInclude Include="../src/MenuState.h" />
+    <ClInclude Include="../src/Game.h" />
+    <ClInclude Include="../src/GameObject.h" />
+    <ClInclude Include="..\src\AnimatedSprite.h" />
+    <ClInclude Include="..\src\Animation.h" />
+    <ClInclude Include="..\src\BoxColliderComponent.h" />
+    <ClInclude Include="..\src\CameraRenderComponent.h" />
+    <ClInclude Include="..\src\ControlsState.h" />
+    <ClInclude Include="..\src\CreditState.h" />
+    <ClInclude Include="..\src\DebugDraw.h" />
+    <ClInclude Include="..\src\EventBus.h" />
+    <ClInclude Include="..\src\ButtleRoyal\dll_export.h" />
+    <ClInclude Include="..\src\GameObjectEvents.h" />
+    <ClInclude Include="..\src\IPlayerState.h" />
+    <ClInclude Include="..\src\IEvent.h" />
+    <ClInclude Include="..\src\GameObjectManager.h" />
+    <ClInclude Include="..\src\LeftAirbornState.h" />
+    <ClInclude Include="..\src\LeftAirPunchState.h" />
+    <ClInclude Include="..\src\LeftJumpingState.h" />
+    <ClInclude Include="..\src\LeftLandingState.h" />
+    <ClInclude Include="..\src\LeftPunchState.h" />
+    <ClInclude Include="..\src\LeftRunningPunchState.h" />
+    <ClInclude Include="..\src\LeftRunningState.h" />
+    <ClInclude Include="..\src\LeftStandingState.h" />
+    <ClInclude Include="..\src\LevelState.h" />
+    <ClInclude Include="..\src\NLTmxMap.h" />
+    <ClInclude Include="..\src\PhysicsComponentEvents.h" />
+    <ClInclude Include="..\src\PhysicsManager.h" />
+    <ClInclude Include="..\src\PlayerPropertyComponent.h" />
+    <ClInclude Include="..\src\PlayerPropertyManager.h" />
+    <ClInclude Include="..\src\PlayerStateManager.h" />
+    <ClInclude Include="..\src\RenderComponentEvents.h" />
+    <ClInclude Include="..\src\RightAirbornState.h" />
+    <ClInclude Include="..\src\RightAirPunchState.h" />
+    <ClInclude Include="..\src\RightJumpingState.h" />
+    <ClInclude Include="..\src\RightLandingState.h" />
+    <ClInclude Include="..\src\RightPunchState.h" />
+    <ClInclude Include="..\src\RightRunningPunchState.h" />
+    <ClInclude Include="..\src\RightRunningState.h" />
+    <ClInclude Include="..\src\RigidBodyComponent.h" />
+    <ClInclude Include="..\src\SoundManager.h" />
+    <ClInclude Include="..\src\SpriteAnimationComponent.h" />
+    <ClInclude Include="..\src\SpriteManager.h" />
+    <ClInclude Include="..\src\RightStandingState.h" />
+    <ClInclude Include="..\src\TileMapLoader.h" />
+    <ClInclude Include="..\src\TransformAnimationConstantMotion.h" />
+    <ClInclude Include="..\src\IComponent.h" />
+    <ClInclude Include="../src/GameStateManager.h" />
+    <ClInclude Include="../src/InputManager.h" />
+    <ClInclude Include="..\src\Debug.h" />
+    <ClInclude Include="..\src\PlayerMoveComponent.h" />
+    <ClInclude Include="..\src\IRenderComponent.h" />
+    <ClInclude Include="..\src\SpriteRenderComponent.h" />
+    <ClInclude Include="..\src\IAnimationComponent.h" />
+    <ClInclude Include="../src/TransformAnimationComponent.h" />
+    <ClInclude Include="../src/TileLayerRenderComponent.h" />
+    <ClInclude Include="..\src\Trigonometry.h" />
+    <ClInclude Include="..\src\VectorAlgebra2D.h" />
+    <ClInclude Include="..\src\VectorAlgebra3D.h" />
+    <ClInclude Include="..\src\WinState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../src/main.cpp" />
+    <ClCompile Include="../src/MainState.cpp" />
+    <ClCompile Include="../src/MenuState.cpp" />
+    <ClCompile Include="../src/Game.cpp" />
+    <ClCompile Include="../src/GameObject.cpp" />
+    <ClCompile Include="../src/GameStateManager.cpp" />
+    <ClCompile Include="../src/InputManager.cpp" />
+    <ClCompile Include="..\src\AnimatedSprite.cpp" />
+    <ClCompile Include="..\src\Animation.cpp" />
+    <ClCompile Include="..\src\BoxColliderComponent.cpp" />
+    <ClCompile Include="..\src\ControlsState.cpp" />
+    <ClCompile Include="..\src\CreditState.cpp" />
+    <ClCompile Include="..\src\DebugDraw.cpp" />
+    <ClCompile Include="..\src\EventBus.cpp" />
+    <ClCompile Include="..\src\GameObjectEvents.cpp" />
+    <ClCompile Include="..\src\GameObjectManager.cpp" />
+    <ClCompile Include="..\src\LeftAirbornState.cpp" />
+    <ClCompile Include="..\src\LeftAirPunchState.cpp" />
+    <ClCompile Include="..\src\LeftJumpingState.cpp" />
+    <ClCompile Include="..\src\LeftLandingState.cpp" />
+    <ClCompile Include="..\src\LeftPunchState.cpp" />
+    <ClCompile Include="..\src\LeftRunningPunchState.cpp" />
+    <ClCompile Include="..\src\LeftRunningState.cpp" />
+    <ClCompile Include="..\src\LeftStandingState.cpp" />
+    <ClCompile Include="..\src\LevelState.cpp" />
+    <ClCompile Include="..\src\NLTmxMap.cpp" />
+    <ClCompile Include="..\src\PhysicsComponentEvents.cpp" />
+    <ClCompile Include="..\src\PhysicsManager.cpp" />
+    <ClCompile Include="..\src\PlayerMoveComponent.cpp" />
+    <ClCompile Include="..\src\CameraRenderComponent.cpp" />
+    <ClCompile Include="..\src\PlayerPropertyComponent.cpp" />
+    <ClCompile Include="..\src\PlayerPropertyManager.cpp" />
+    <ClCompile Include="..\src\PlayerStateManager.cpp" />
+    <ClCompile Include="..\src\RenderComponentEvents.cpp" />
+    <ClCompile Include="..\src\RightAirbornState.cpp" />
+    <ClCompile Include="..\src\RightAirPunchState.cpp" />
+    <ClCompile Include="..\src\RightJumpingState.cpp" />
+    <ClCompile Include="..\src\RightLandingState.cpp" />
+    <ClCompile Include="..\src\RightPunchState.cpp" />
+    <ClCompile Include="..\src\RightRunningPunchState.cpp" />
+    <ClCompile Include="..\src\RightRunningState.cpp" />
+    <ClCompile Include="..\src\RigidBodyComponent.cpp" />
+    <ClCompile Include="..\src\SoundManager.cpp" />
+    <ClCompile Include="..\src\SpriteAnimationComponent.cpp" />
+    <ClCompile Include="..\src\SpriteManager.cpp" />
+    <ClCompile Include="..\src\SpriteRenderComponent.cpp" />
+    <ClCompile Include="..\src\RightStandingState.cpp" />
+    <ClCompile Include="..\src\TileMapLoader.cpp" />
+    <ClCompile Include="..\src\TransformAnimationComponent.cpp" />
+    <ClCompile Include="..\src\TransformAnimationConstantMotion.cpp" />
+    <ClCompile Include="../src/TileLayerRenderComponent.cpp" />
+    <ClCompile Include="../src/stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\WinState.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\VectorAlgebra2D.inl" />
+    <None Include="..\src\VectorAlgebra3D.inl" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
