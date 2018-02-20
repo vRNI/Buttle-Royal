@@ -21,5 +21,5 @@ Attention:
 There are some minor things that might be in the way of a showcase
 * resolution is only optimized for 1920x1080 (menu is fine but screen might be cut off in-game)
 * no quit-button (you have to ALT + F4 out)
-* release build not working because there´s no accumulator in the PhysicsManager
+* only debug build working properly because there´s no accumulator in the PhysicsManager
 * there are other gameplay related issues, that I would like to fix
