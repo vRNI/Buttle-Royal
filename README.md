@@ -15,9 +15,9 @@ Controls:
 * Punch:	Down Arrow	| S | X-Button (on Xbox Controller)
 
 Created by:
-Arnold Holler(me) - programmer
-Michael Etschbacher - programmer
-Irma Muminovic - artist and creator of our awesome assfaces
+* Arnold Holler(me) - programmer
+* Michael Etschbacher - programmer
+* Irma Muminovic - artist and creator of our awesome assfaces
 
 Attention:
 There are some minor things that might be in the way of a showcase
