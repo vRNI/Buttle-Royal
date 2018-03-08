@@ -8,16 +8,19 @@ Two butts face off against each other. One player on the ground the other one up
 Made in the third Semester as part of the bachelor´s program MultiMediaTechnology of the University if Applied Sciences Salzburg
 In teams of two we had to make our own engine over the span of a course and at the end of the semester had 5 days´ time to make a game.
 
+
 Controls:
 * Left:	  Left Arrow	| A | Left Joystick
 * Right:	Right Arrow | D | Left Joystick
 * Jump:	  Up Arrow 	  | W | A-Button (on Xbox Controller)
 * Punch:	Down Arrow	| S | X-Button (on Xbox Controller)
 
+
 Created by:
 * Arnold Holler(me) - programmer
 * Michael Etschbacher - programmer
 * Irma Muminovic - artist and creator of our awesome assfaces
+
 
 Attention:
 There are some minor things that might be in the way of a showcase
