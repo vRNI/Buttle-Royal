@@ -5,7 +5,7 @@ Two butts face off against each other. One player on the ground the other one up
 
 ![Level Sample](https://github.com/vRNI/Buttle-Royal/blob/master/ButtleRoyal/assets/Map4.png)
 
-Made in the third Semester as part of the bachelor´s program MultiMediaTechnology of the University if Applied Sciences Salzburg
+Made in the third Semester as part of the bachelor´s program MultiMediaTechnology in the University of Applied Sciences Salzburg
 In teams of two we had to make our own engine over the span of a course and at the end of the semester had 5 days´ time to make a game.
 
 
@@ -19,12 +19,7 @@ Controls:
 Created by:
 * Arnold Holler(me) - programmer
 * Michael Etschbacher - programmer
-* Irma Muminovic - artist and creator of our awesome assfaces
+* Irma Muminovic - artist
 
 
-Attention:
-There are some minor things that might be in the way of a showcase
-* resolution is only optimized for 1920x1080 (menu is fine but screen might be cut off in-game)
-* no quit-button (you have to ALT + F4 out)
-* only debug build working properly because there´s no accumulator in the PhysicsManager
-* there are other gameplay related issues, that I would like to fix
+This is my first game. Things may not run smoothly (or at all).
